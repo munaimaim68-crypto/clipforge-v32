@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: clipforge-ai-v32
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: MAX_VIDEO_DURATION
+        value: "14400"
+      - key: MAX_VIDEO_BYTES
+        value: "2147483648"

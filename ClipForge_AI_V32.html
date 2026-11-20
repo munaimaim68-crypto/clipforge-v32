@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ClipForge AI V32</title>
+<style>
+:root{--bg:#080a12;--panel:#111827;--panel2:#0b1220;--line:#28344a;--text:#f1f5ff;--muted:#9ba9c2;--violet:#8b5cf6;--blue:#3b82f6;--cyan:#22d3ee;--green:#42d99a}
+*{box-sizing:border-box}body{margin:0;color:var(--text);font-family:system-ui,-apple-system,Roboto,Arial;background:radial-gradient(ellipse at 8% 0,#27134c 0,transparent 36%),radial-gradient(ellipse at 96% 10%,#073846 0,transparent 36%),var(--bg)}
+main{max-width:850px;margin:auto;padding:17px 14px 42px}.head{display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-size:23px;font-weight:900;letter-spacing:-.6px}.brand b{color:#a893ff}.version{font-size:11px;background:#35245c;color:#d5caff;border:1px solid #59428d;padding:6px 9px;border-radius:99px}.tagline{font-size:13px;color:var(--muted);margin:6px 0 17px}
+.card{background:linear-gradient(145deg,#121b2bf2,#0e1422f5);border:1px solid var(--line);border-radius:18px;padding:16px;margin:13px 0;box-shadow:0 12px 30px #0002}.section{font-weight:800;margin:0 0 12px;font-size:16px}.hint{color:var(--muted);font-size:12px;line-height:1.55}label{display:block;color:#c6d0e5;font-size:12px;margin:12px 0 6px}input,select,textarea{width:100%;background:#090f1a;color:var(--text);border:1px solid #344258;border-radius:11px;padding:12px;font:inherit;font-size:14px}input[type=file]{padding:8px}textarea{resize:vertical;min-height:65px}button{border:0;border-radius:11px;padding:12px;background:linear-gradient(100deg,var(--violet),#3d8cff);color:white;font-weight:800;font:inherit;cursor:pointer}button:disabled{opacity:.45;cursor:default}.alt{background:#202b40;border:1px solid #3b4a63}.danger{background:#48243b;border:1px solid #80435f}.row{display:flex;gap:9px}.row>*{flex:1;min-width:0}.tabs{display:flex;gap:7px}.tabs button{flex:1;font-size:12px;padding:10px}.tabs button.active{background:linear-gradient(100deg,#8355fa,#268dff)}.video{border-radius:14px;background:#03050a;overflow:hidden;margin-top:10px}.video video{display:block;width:100%;max-height:55vh}.video iframe{display:block;width:100%;aspect-ratio:16/9;border:0}.status{font-size:12px;color:var(--muted);margin-top:8px}.status.ok{color:var(--green)}.status.warn{color:#ffd17b}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}.metric{background:#0a111c;border:1px solid #28354a;border-radius:12px;padding:12px}.metric strong{font-size:20px;display:block}.metric small{color:var(--muted)}.progress{height:7px;background:#273249;border-radius:99px;overflow:hidden;margin:12px 0 6px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#8b5cf6,#22d3ee)}.clip{border:1px solid #2c3a50;background:#0b121e;border-radius:13px;padding:12px;margin:9px 0}.clip.selected{border-color:#9776ff;box-shadow:0 0 0 1px #7954df44}.cliphead{display:flex;justify-content:space-between;gap:8px;font-weight:750}.score{font-size:11px;color:#82e6b3}.clip p{font-size:12px;color:var(--muted);line-height:1.5}.clip button{font-size:12px;padding:9px}.empty{color:var(--muted);text-align:center;padding:14px;font-size:13px}.styles{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.styleCard{background:#0a111d;border:1px solid #2b394f;border-radius:13px;padding:11px;cursor:pointer;text-align:center}.styleCard.active{border-color:#9a7aff;box-shadow:0 0 0 1px #835bff66}.sample{min-height:48px;display:grid;place-items:center;font-weight:900;font-size:14px;line-height:1.15;margin-bottom:8px;padding:6px}.sample.classic{text-shadow:2px 2px 3px black,-2px -2px 2px black;color:white}.sample.box{background:#000b;border-radius:8px;color:#fff}.sample.neon{color:#67f7ff;text-shadow:0 0 7px #0af,0 0 14px #08f}.sample.yellow{color:#ffe45c;text-shadow:2px 2px 2px #000,-1px -1px 2px #000}.sample.minimal{color:white;background:#101827;border-radius:8px}.sample.karaoke{color:#fff;background:#3a1645;border-radius:8px}.subitem{display:grid;grid-template-columns:1fr 72px 72px 35px;gap:6px;margin:8px 0;align-items:center}.subitem textarea{min-height:45px;padding:8px;font-size:12px}.subitem input{padding:8px;font-size:12px}.subitem button{padding:7px;background:#52233a}.suboverlay{position:absolute;bottom:8%;left:5%;right:5%;text-align:center;font-weight:900;font-size:clamp(16px,4.6vw,30px);white-space:pre-wrap;pointer-events:none;padding:8px 10px;color:white;text-shadow:2px 2px 3px #000,-2px -2px 3px #000}.suboverlay.box{background:#000b;border-radius:9px;text-shadow:none}.suboverlay.neon{color:#67f7ff;text-shadow:0 0 8px #00bfff,2px 2px 3px black}.suboverlay.yellow{color:#ffe45c;text-shadow:2px 2px 3px black,-2px -2px 3px black}.suboverlay.minimal{background:#111a2bd9;border-radius:8px;text-shadow:none}.suboverlay.karaoke{background:#481c55d9;border-radius:8px;color:#ffec65;text-shadow:2px 2px 3px black}.hide{display:none!important}.previewWrap{position:relative}.bottom{color:#65748d;text-align:center;font-size:11px;padding:15px}@media(min-width:600px){main{padding:24px}.metrics{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body><main>
+<div class="head"><div class="brand">✦ ClipForge <b>AI</b></div><div class="version">V32 YOUTUBE + SERVER</div></div>
+<div class="tagline">Subtitle templates • clip workspace • mobile-friendly</div>
+
+<section class="card">
+<h2 class="section">01 · Sumber video</h2>
+<div class="tabs"><button class="active" id="tabFile">Upload video</button><button class="alt" id="tabURL">URL video</button></div>
+<div id="filePanel"><label>Pilih video dari HP</label><input type="file" id="file" accept="video/*"></div>
+<div id="urlPanel" class="hide"><label>URL YouTube</label><input id="url" placeholder="https://youtu.be/... atau https://youtube.com/watch?v=..."><button class="alt" id="openUrl" style="width:100%;margin-top:9px">Buka Preview YouTube</button><button class="alt" id="checkServer" style="width:100%;margin-top:8px">Tes koneksi server</button><p class="status" id="serverStatus">Server belum diperiksa.</p><p class="hint">Scan YouTube memerlukan backend V32 yang sudah online. Buka aplikasi dari alamat HTTPS server, bukan dari file HTML lokal.</p></div>
+<div class="video" id="videoBox"></div>
+<div class="status" id="sourceStatus">Upload video untuk preview, scan audio, dan export.</div>
+<p class="hint">YouTube URL dapat dicoba untuk preview embed. Browser tidak dapat mengambil audio/transkrip YouTube atau mengekspor potongannya tanpa backend yang memiliki akses video. URL video langsung (MP4/WebM) bisa dicoba di player, tergantung CORS dan dukungan browser.</p>
+</section>
+
+<section class="card">
+<h2 class="section">02 · Scan kandidat (audio)</h2>
+<div class="metrics"><div class="metric"><strong id="dur">--</strong><small>Durasi</small></div><div class="metric"><strong id="num">0</strong><small>Kandidat</small></div><div class="metric"><strong id="scanState">Idle</strong><small>Status</small></div><div class="metric"><strong>60s+</strong><small>Clip target</small></div></div>
+<div class="row"><div><label>Target kandidat</label><input type="number" id="target" min="1" max="100" value="40"></div><div><label>Durasi clip (detik)</label><input type="number" id="clipLen" min="15" max="900" value="60"></div></div>
+<button id="scan" disabled style="width:100%;margin-top:12px">✦ SCAN VIDEO</button><div class="progress"><span id="bar"></span></div><div class="status" id="scanStatus">Upload video lokal atau buka link YouTube untuk scan melalui server.</div><div id="clipList" class="empty">Hasil scan tampil di sini.</div>
+<p class="hint">Analisis audio mencari bagian dengan intensitas tertinggi. Ini bukan jaminan momen viral atau pemahaman konteks.</p>
+</section>
+
+<section class="card">
+<h2 class="section">03 · Pilih subtitle template</h2>
+<div class="styles" id="styles">
+<div class="styleCard active" data-style="classic"><div class="sample classic">SUBTITLE KEREN</div>Classic Bold</div>
+<div class="styleCard" data-style="box"><div class="sample box">SUBTITLE KEREN</div>Black Box</div>
+<div class="styleCard" data-style="neon"><div class="sample neon">SUBTITLE KEREN</div>Neon Cyan</div>
+<div class="styleCard" data-style="yellow"><div class="sample yellow">SUBTITLE KEREN</div>Yellow Pop</div>
+<div class="styleCard" data-style="minimal"><div class="sample minimal">SUBTITLE KEREN</div>Minimal Clean</div>
+<div class="styleCard" data-style="karaoke"><div class="sample karaoke">SUBTITLE KEREN</div>Karaoke Pop</div>
+</div>
+<label>Ukuran subtitle</label><select id="subSize"><option value="small">Kecil</option><option selected value="medium">Sedang</option><option value="large">Besar</option></select>
+</section>
+
+<section class="card">
+<h2 class="section">04 · Subtitle editor</h2><label>Text subtitle</label><textarea id="newText" placeholder="Tulis caption/subtitle di sini"></textarea>
+<div class="row"><div><label>Mulai detik</label><input type="number" id="start" value="0" min="0"></div><div><label>Berakhir detik</label><input type="number" id="end" value="4" min="0"></div></div>
+<button id="add" style="width:100%;margin-top:10px">+ Tambah subtitle</button><div id="subtitleList"></div>
+<button class="alt" id="downloadSrt" style="width:100%;margin-top:10px">Download subtitle .SRT</button>
+</section>
+
+<section class="card">
+<h2 class="section">05 · Clip & export</h2><p class="hint">Pilih momen untuk preview. Export WebM dengan overlay template subtitle yang waktunya sudah dibuat manual.</p>
+<button id="export" disabled style="width:100%">⬇ EXPORT CLIP WEBM</button><button id="stop" class="alt" disabled style="width:100%;margin-top:8px">Stop export</button><div class="status" id="exportStatus">Upload video lokal dan pilih momen dulu.</div>
+</section>
+<div class="bottom">ClipForge AI V32 • YouTube scan memerlukan backend aktif</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);let video=null, file=null, audio=null, remoteSource=false, moments=[],selected=-1,subs=[],styleName="classic",rec=null,recording=false;
+const fmt=t=>{t=Math.floor(Math.max(0,t));return `${Math.floor(t/60)}:${String(t%60).padStart(2,"0")}`};
+function status(id,t,c=""){$(id).className="status "+c;$(id).textContent=t}
+function showTab(which){$("tabFile").classList.toggle("active",which==="file");$("tabURL").classList.toggle("active",which==="url");$("tabURL").classList.toggle("alt",which==="file");$("tabFile").classList.toggle("alt",which==="url");$("filePanel").classList.toggle("hide",which!=="file");$("urlPanel").classList.toggle("hide",which!=="url")}
+$("tabFile").onclick=()=>showTab("file");$("tabURL").onclick=()=>showTab("url");
+function clearVideo(){
+ if(video){try{video.pause();video.removeAttribute("src");video.load()}catch(e){} video=null}
+ $("videoBox").innerHTML="";moments=[];selected=-1;subs=[];renderSubs();renderMoments();
+ $("scan").disabled=true;$("export").disabled=true;$("stop").disabled=true;
+ $("dur").textContent="--";$("num").textContent="0";$("scanState").textContent="Idle";
+ $("bar").style.width="0%";status("scanStatus","Upload video lokal atau buka link YouTube untuk scan melalui server.");
+}
+function mountVideo(src){clearVideo();video=document.createElement("video");video.src=src;video.controls=true;video.playsInline=true;video.preload="metadata";$("videoBox").appendChild(video);video.onloadedmetadata=()=>{$("dur").textContent=fmt(video.duration);$("scan").disabled=!file;status("sourceStatus","Video siap · "+fmt(video.duration),"ok");};video.onerror=()=>status("sourceStatus","Tidak dapat memuat video. URL mungkin dibatasi/CORS.","warn");}
+$("file").onchange=()=>{file=$("file").files[0];if(file){remoteSource=false;mountVideo(URL.createObjectURL(file));status("sourceStatus","File lokal: "+file.name,"ok");}};
+function getYtId(raw){try{let u=new URL(raw);if(u.hostname.endsWith("youtu.be"))return u.pathname.split("/").filter(Boolean)[0];if(u.hostname.includes("youtube.com")||u.hostname.includes("youtube-nocookie.com"))return u.searchParams.get("v")||u.pathname.split("/").filter(Boolean).pop();}catch(e){}return null}
+$("openUrl").onclick=()=>{
+ const raw=$("url").value.trim();if(!raw){status("sourceStatus","Masukkan URL dulu.","warn");return}
+ const yt=getYtId(raw);clearVideo();file=null;remoteSource=false;
+ if(yt&&/^[\w-]{11}$/.test(yt)){
+  const iframe=document.createElement("iframe");iframe.src=`https://www.youtube-nocookie.com/embed/${yt}`;iframe.allow="accelerometer; autoplay; encrypted-media; picture-in-picture";iframe.allowFullscreen=true;$("videoBox").appendChild(iframe);
+  remoteSource=true;$("scan").disabled=false;$("export").disabled=true;
+  status("sourceStatus","YouTube siap. Scan akan diproses oleh backend V32.","ok");return;
+ }
+ if(/^https?:\/\//i.test(raw)){video=document.createElement("video");video.src=raw;video.controls=true;video.playsInline=true;video.preload="metadata";$("videoBox").appendChild(video);video.onloadedmetadata=()=>{$("dur").textContent=fmt(video.duration);status("sourceStatus","URL video langsung dimuat. Scan lokal bergantung CORS.","ok");};video.onerror=()=>status("sourceStatus","URL gagal: pastikan link file video langsung dan host mengizinkan browser.","warn");return;}
+ status("sourceStatus","URL tidak dikenali. Coba link YouTube yang valid.","warn");
+};
+$("checkServer").onclick=async()=>{
+ const b=$("checkServer");b.disabled=true;status("serverStatus","Memeriksa server...");
+ try{const r=await fetch(location.origin+"/health",{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);const d=await r.json();if(!d.ok)throw Error("Server belum siap");status("serverStatus","Server V32 online · FFmpeg: "+(d.ffmpeg?"siap":"tidak ditemukan"),"ok");}
+ catch(e){status("serverStatus","Server belum tersambung: "+e.message+". Deploy backend dan buka URL hosting.","warn");}
+ finally{b.disabled=false;}
+};
+$("scan").onclick=async()=>{
+ if(remoteSource){
+  const raw=$("url").value.trim();if(!getYtId(raw)){status("scanStatus","URL YouTube tidak valid.","warn");return}
+  const apiBase=location.origin;
+  $("scan").disabled=true;$("scanState").textContent="Working";$("bar").style.width="15%";
+  status("scanStatus","Server sedang mengambil audio dan menganalisis video. Tunggu beberapa saat...");
+  try{
+   const r=await fetch(apiBase+"/api/analyze",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({url:raw,target:+$("target").value||40,clip_length:+$("clipLen").value||60})});
+   const data=await r.json();if(!r.ok)throw Error(data.detail||"Server gagal menganalisis video");
+   moments=data.candidates||[];selected=-1;renderMoments();$("num").textContent=moments.length;$("dur").textContent=fmt(data.duration||0);$("scanState").textContent="Done";$("bar").style.width="100%";
+   status("scanStatus",`Server selesai. ${moments.length} kandidat ditemukan. Pilih momen untuk export.`,"ok");
+  }catch(e){$("scanState").textContent="Error";status("scanStatus","Gagal: "+e.message+". Pastikan V32 backend aktif dan video dapat diakses.","warn");}
+  finally{$("scan").disabled=false;}
+  return;
+ }
+ if(!file||!video){status("scanStatus","Upload file lokal atau masukkan link YouTube dengan backend aktif.","warn");return}
+ $("scanState").textContent="Reading";
+ try{const C=window.AudioContext||window.webkitAudioContext;if(!C)throw Error("AudioContext tidak didukung");const ctx=new C();audio=await ctx.decodeAudioData(await file.arrayBuffer());ctx.close();}catch(e){status("scanStatus","Browser tidak dapat decode audio. Coba file MP4 lain.","warn");$("scanState").textContent="Error";return}
+ const ch=audio.getChannelData(0),rate=audio.sampleRate,dur=video.duration,step=2,windowS=rate*step,energies=[];
+ for(let i=0;i<dur;i+=step){let a=Math.floor(i*rate),b=Math.min(ch.length,a+windowS),sum=0,n=0;for(let j=a;j<b;j+=6){sum+=ch[j]*ch[j];n++}energies.push({t:i,rms:Math.sqrt(sum/(n||1))})}
+ const sorted=energies.map(e=>e.rms).sort((a,b)=>a-b),threshold=Math.max(sorted[Math.floor(sorted.length*.75)]||0,0.006),want=Math.min(100,Math.max(1,+$("target").value||40)),length=Math.min(dur,Math.max(15,+$("clipLen").value||60));
+ let peaks=energies.filter(e=>e.rms>=threshold).sort((a,b)=>b.rms-a.rms),found=[];
+ for(const p of peaks){let start=Math.max(0,Math.min(dur-length,p.t-length/2)),end=Math.min(dur,start+length);if(found.some(m=>Math.abs(m.start-start)<length*.65))continue;found.push({start,end,score:Math.min(99,Math.round(p.rms/(sorted[Math.floor(sorted.length*.9)]||.01)*70))});if(found.length>=want)break}
+ moments=found.sort((a,b)=>b.score-a.score);selected=-1;renderMoments();$("num").textContent=moments.length;$("scanState").textContent="Done";$("bar").style.width="100%";status("scanStatus",`Selesai. ${moments.length} kandidat berdasarkan audio peaks. Review hasilnya.`,"ok");
+};
+function renderMoments(){const box=$("clipList");if(!box)return;if(!moments.length){box.className="empty";box.textContent="Hasil scan tampil di sini.";return}box.className="";box.innerHTML=moments.map((m,i)=>`<div class="clip ${selected===i?"selected":""}"><div class="cliphead"><span>Moment ${i+1}</span><span class="score">Audio score ${m.score}</span></div><p>${fmt(m.start)} → ${fmt(m.end)} · ${Math.round(m.end-m.start)}s</p><div class="row">${video?`<button class="alt" data-p="${i}">Preview</button>`:""}<button data-sel="${i}">${selected===i?"Selected ✓":"Pilih"}</button></div></div>`).join("");box.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{video.currentTime=moments[+b.dataset.p].start;video.play()});box.querySelectorAll("[data-sel]").forEach(b=>b.onclick=()=>{selected=+b.dataset.sel;renderMoments();$("export").disabled=false;status("exportStatus","Moment "+(selected+1)+" terpilih.","ok")})}
+$("styles").querySelectorAll(".styleCard").forEach(c=>c.onclick=()=>{styleName=c.dataset.style;$("styles").querySelectorAll(".styleCard").forEach(x=>x.classList.toggle("active",x===c))});
+$("add").onclick=()=>{let txt=$("newText").value.trim(),s=Number($("start").value),e=Number($("end").value);if(!txt||e<=s){alert("Teks subtitle dan waktu harus valid");return}subs.push({text:txt,start:s,end:e});$("newText").value="";renderSubs()};
+function escapeHtml(value){return String(value).replace(/[&<>]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[ch]))}
+function renderSubs(){const box=$("subtitleList");box.innerHTML=subs.map((s,i)=>`<div class="subitem"><textarea data-text="${i}">${escapeHtml(s.text)}</textarea><input data-start="${i}" type="number" value="${s.start}"><input data-end="${i}" type="number" value="${s.end}"><button data-remove="${i}">×</button></div>`).join("");box.querySelectorAll("[data-text]").forEach(el=>el.onchange=()=>subs[+el.dataset.text].text=el.value);box.querySelectorAll("[data-start]").forEach(el=>el.onchange=()=>subs[+el.dataset.start].start=+el.value);box.querySelectorAll("[data-end]").forEach(el=>el.onchange=()=>subs[+el.dataset.end].end=+el.value);box.querySelectorAll("[data-remove]").forEach(el=>el.onclick=()=>{subs.splice(+el.dataset.remove,1);renderSubs()});}
+function srtTime(sec){let ms=Math.round((sec%1)*1000),s=Math.floor(sec),h=Math.floor(s/3600),m=Math.floor((s%3600)/60),ss=s%60;return `${String(h).padStart(2,"0")}:${String(m).padStart(2,"0")}:${String(ss).padStart(2,"0")},${String(ms).padStart(3,"0")}`}
+$("downloadSrt").onclick=()=>{if(!subs.length){alert("Belum ada subtitle");return}let content=subs.map((s,i)=>`${i+1}\n${srtTime(s.start)} --> ${srtTime(s.end)}\n${s.text}`).join("\n\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([content],{type:"text/plain;charset=utf-8"}));a.download="clipforge_subtitles.srt";a.click()};
+function draw(ctx,w,h,clipStart,local){ctx.drawImage(video,0,0,w,h);let active=subs.filter(s=>clipStart+local>=s.start&&clipStart+local<=s.end);if(!active.length)return;let txt=active[active.length-1].text,size=$("subSize").value;ctx.font=`900 ${size==="small"?30:size==="large"?54:42}px Arial`;ctx.textAlign="center";ctx.textBaseline="bottom";let words=txt.split(/\s+/),lines=[],line="";for(let word of words){let t=line?line+" "+word:word;if(ctx.measureText(t).width>w*.84&&line){lines.push(line);line=word}else line=t}if(line)lines.push(line);let lh=size==="small"?36:size==="large"?60:48,pad=16,bh=lh*lines.length+pad*2,y=h-bh-h*.07;const style=styleName;if(["box","minimal","karaoke"].includes(style)){ctx.fillStyle=style==="minimal"?"rgba(15,25,42,.85)":style==="karaoke"?"rgba(70,20,85,.85)":"rgba(0,0,0,.7)";ctx.fillRect(w*.05,y,w*.9,bh)}lines.forEach((l,i)=>{ctx.fillStyle=style==="neon"?"#67f7ff":style==="yellow"?"#ffe45c":style==="karaoke"?"#ffec65":"white";ctx.shadowColor="#000";ctx.shadowBlur=style==="neon"?14:3;ctx.shadowOffsetX=2;ctx.shadowOffsetY=2;ctx.fillText(l,w/2,y+pad+(i+1)*lh);ctx.shadowBlur=0})}
+$("export").onclick=async()=>{
+ if(remoteSource&&selected>=0){
+  const m=moments[selected];status("exportStatus","Server sedang membuat potongan MP4...");$("export").disabled=true;
+  try{const r=await fetch(location.origin+"/api/export",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({url:$("url").value.trim(),start:m.start,end:m.end})});if(!r.ok){let d={};try{d=await r.json()}catch(_){}throw Error(d.detail||"Export server gagal")};const blob=await r.blob(),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download=`clipforge_${selected+1}.mp4`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),60000);status("exportStatus","Export MP4 selesai diunduh.","ok");}
+  catch(e){status("exportStatus","Export gagal: "+e.message,"warn");}finally{$("export").disabled=false;}return;
+ }
+ if(!file||!video||selected<0){status("exportStatus","Pilih video lokal dan momen clip terlebih dahulu.","warn");return}
+ if(!canvasSupport()){status("exportStatus","Browser belum mendukung export canvas capture / MediaRecorder.","warn");return}
+ const m=moments[selected],start=m.start,end=m.end;
+ try{
+  video.pause();
+  if(video.readyState<1) await new Promise((resolve,reject)=>{video.addEventListener("loadedmetadata",resolve,{once:true});video.addEventListener("error",()=>reject(Error("Metadata video gagal dibaca")),{once:true})});
+  await new Promise((resolve,reject)=>{const done=()=>{cleanup();resolve()};const fail=()=>{cleanup();reject(Error("Gagal berpindah ke waktu clip"))};const cleanup=()=>{video.removeEventListener("seeked",done);video.removeEventListener("error",fail)};video.addEventListener("seeked",done,{once:true});video.addEventListener("error",fail,{once:true});video.currentTime=start;setTimeout(()=>{if(Math.abs(video.currentTime-start)<0.15)done()},2500)});
+  const vw=video.videoWidth||720,vh=video.videoHeight||1280,scale=Math.min(1,1080/Math.max(vw,vh));
+  const canvas=document.createElement("canvas");canvas.width=Math.max(2,Math.round(vw*scale/2)*2);canvas.height=Math.max(2,Math.round(vh*scale/2)*2);
+  const ctx=canvas.getContext("2d");if(!ctx)throw Error("Canvas tidak tersedia");
+  const stream=canvas.captureStream(30),vstream=video.captureStream?video.captureStream():video.mozCaptureStream?.();
+  if(vstream)vstream.getAudioTracks().forEach(t=>stream.addTrack(t));
+  const mime=["video/webm;codecs=vp9,opus","video/webm;codecs=vp8,opus","video/webm"].find(t=>MediaRecorder.isTypeSupported(t));
+  rec=new MediaRecorder(stream,mime?{mimeType:mime}:{});let chunks=[];
+  rec.ondataavailable=e=>{if(e.data&&e.data.size)chunks.push(e.data)};
+  rec.onerror=e=>{recording=false;status("exportStatus","Export error: "+(e.error?.message||"MediaRecorder gagal"),"warn");$("stop").disabled=true;$("export").disabled=false};
+  rec.onstop=()=>{
+   stream.getTracks().forEach(t=>t.stop());if(vstream)vstream.getTracks().forEach(t=>t.stop());
+   if(chunks.length){const blob=new Blob(chunks,{type:rec.mimeType||"video/webm"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=`clipforge_${selected+1}.webm`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);status("exportStatus","Export selesai. File WebM berhasil dibuat.","ok")}
+   else status("exportStatus","Export berhenti tanpa data video. Coba browser lain atau file MP4 lain.","warn");
+   $("stop").disabled=true;$("export").disabled=false;
+  };
+  recording=true;rec.start(250);$("stop").disabled=false;$("export").disabled=true;
+  status("exportStatus","Export berjalan. Jangan tutup atau pindah tab sampai selesai.");
+  await video.play();
+  const loop=()=>{
+   if(!recording)return;
+   try{ctx.drawImage(video,0,0,canvas.width,canvas.height);drawSubtitleOnly(ctx,canvas.width,canvas.height,start,video.currentTime-start)}catch(e){}
+   if(video.currentTime>=end||video.ended){recording=false;video.pause();if(rec&&rec.state!=="inactive")rec.stop();return}
+   requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+ }catch(err){recording=false;try{if(rec&&rec.state!=="inactive")rec.stop()}catch(e){}status("exportStatus","Export gagal: "+err.message,"warn");$("stop").disabled=true;$("export").disabled=false}
+};
+function drawSubtitleOnly(ctx,w,h,clipStart,local){
+ const active=subs.filter(s=>clipStart+local>=s.start&&clipStart+local<=s.end);if(!active.length)return;
+ const txt=active[active.length-1].text,size=$("subSize").value,base=Math.min(w/720,h/1280);
+ ctx.font=`900 ${Math.round((size==="small"?30:size==="large"?54:42)*base)}px Arial`;ctx.textAlign="center";ctx.textBaseline="bottom";
+ const words=txt.split(/\s+/),lines=[];let line="";
+ for(const word of words){const t=line?line+" "+word:word;if(ctx.measureText(t).width>w*.84&&line){lines.push(line);line=word}else line=t}if(line)lines.push(line);
+ const lh=(size==="small"?36:size==="large"?60:48)*base,pad=16*base,bh=lh*lines.length+pad*2,y=h-bh-h*.07,style=styleName;
+ if(["box","minimal","karaoke"].includes(style)){ctx.fillStyle=style==="minimal"?"rgba(15,25,42,.85)":style==="karaoke"?"rgba(70,20,85,.85)":"rgba(0,0,0,.7)";ctx.fillRect(w*.05,y,w*.9,bh)}
+ lines.forEach((l,i)=>{ctx.fillStyle=style==="neon"?"#67f7ff":style==="yellow"?"#ffe45c":style==="karaoke"?"#ffec65":"white";ctx.shadowColor="#000";ctx.shadowBlur=style==="neon"?14*base:3*base;ctx.shadowOffsetX=2*base;ctx.shadowOffsetY=2*base;ctx.fillText(l,w/2,y+pad+(i+1)*lh)});ctx.shadowBlur=0;
+}
+function canvasSupport(){try{return !!document.createElement("canvas").captureStream&&typeof MediaRecorder!=="undefined"}catch(e){return false}}
+$("stop").onclick=()=>{if(recording){recording=false;if(video)video.pause();if(rec&&rec.state!=="inactive")rec.stop();$("stop").disabled=true}};
+</script>
+</body></html>
